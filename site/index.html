@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.style.display = 'block';
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>CTF</h1>
+        <nav>
+            <a onclick="showSection('home')">Главная</a> |
+            <a onclick="showSection('about')">О проекте</a> |
+            <a onclick="showSection('participants')">Участники</a> |
+            <a onclick="showSection('journal')">Журнал</a> |
+            <a onclick="showSection('resources')">Ресурсы</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section">
+            <h2>Главная</h2>
+            <p>Capture The Flag (CTF) — это соревнования в области информационной безопасности, где участники решают различные задачи для получения "флагов".  Флаг — это секретная строка, которая подтверждает успешное решение задачи. Целью CTF является развитие практических навыков в области информационной безопасности и подготовка к реальным задачам.</p>
+            <img src="images/ctf_logo.png" alt="" width="400"> 
+        </section>
+        <section id="about" class="section" style="display:none;">
+            <h2>О проекте</h2>
+            <p>
+                Этот проект был разработан для студентов, начинающих специалистов в области информационной безопасности.
+                Он охватывает следующие области:
+            </p>
+            <ul>
+                <li>Веб-безопасность (SQL injection, XSS, CSRF)</li>
+                <li>Криптография</li>
+                <li>Реверс-инжиниринг</li>
+                <li>Сетевая безопасность</li>
+                <li>Форензика</li>
+            </ul>
+            <p>
+                Цель: Создание сообщества для тренировки студентов в области кибербезопасности, предоставляющего комплексное обучение как атакующим, так и защитным методам, подготовку профессиональной команды CTF, а также создание платформы для проведения соревнований и других образовательных мероприятий.
+            </p>
+        </section>
+
+        <section id="participants" class="section" style="display:none;">
+            <h2>Участники</h2>
+            <ul>
+                <li>
+                    <h3>Друдэ Ирина Викторовна</h3>
+                    <p>Вклад: Изучение нового материала по CTF, решение практических заданий, посещение мероприятий, связанных с информационной безопасностью, отчетность по проделанной работе.</p>
+                </li>
+            </ul>
+        </section>
+
+
+
+        <section id="journal" class="section" style="display:none;">
+            <h2>Журнал</h2>
+            <p>Здесь информация о моих достижениях и прогрессе в проекте и вариативной части практики.</p>
+        
+            <div class="journal-post">
+                <h3>Нахождение флага на "Hack The Box"</h3>
+                <img src="images/pr.jpg" alt="Скриншот выполненного задания" width="600">
+                <p>Интересный опыт работы на сайте HTB, а также применение известных мне методов нахождения флага на практике.</p>
+            </div>
+        
+            <div class="journal-post">
+                <h3>Задача по стеганографии</h3>
+                <img src="images/or.jpg" alt="Нахождение флага в изображении" width="600">
+                <p>С помощью различных дополнительных ресурсов смогла научиться обнаруживать флаги, спрятанные в изображениях.</p>
+            </div>
+        
+            <div class="journal-post">
+                <h3>Разметка огня и дыма</h3>
+                <img src="images/yr.jpg" alt="Скриншот из проделанной разметки" width="600">
+                <p>Узнала основные критерии разметки, как нейросеть воспринимает то, что мы выделяем за объекты, разметила нужные объекты для обучения нейросети.</p>
+            </div>
+        </section>
+
+        <section id="resources" class="section" style="display:none;">
+            <h2>Ресурсы</h2>
+            <p>Список полезных ресурсов и материалов для изучения.</p>
+                <h3>Полезные ресурсы по "Проектной деятельности"</h3>
+                <ul>
+                    <li><a href="https://www.hackthebox.com/?source=techstories.org">Hack The Box</a> - Онлайн-платформа для улучшения навыков пентестинга и информационной безопасности через практику на реальных (или очень реалистичных) машинах.</li>
+                    <li><a href="https://portswigger.net/">PortSwigger</a> - Предоставляет инструменты и ресурсы для тестирования веб-приложений на безопасность.</li>
+                    <li><a href="https://habr.com/ru/users/ap_security/articles/">Статьи "HTB"</a> - Общее представление, теория и разбора задач.</li>
+                    <li><a href="https://ctftime.org/event/list/upcoming">Сайт CTFtime.org</a> - Рейтинг и календарь CTF соревнований.</li>
+                </ul>
+                <h3>Ресурсы по вариативной части</h3>
+                <ul>
+                    <li><a href="https://www.nslab.ru/about/informatsiya-1/">ООО "НЛБ"</a> - Ссылка на организацию партнёра.</li>
+                    <li><a href="https://app.cvat.ai/tasks">CVAT</a> - Сайт с кадрами для выполнения разметки огня и дыма.</li>
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 CTF</p>
+    </footer>
+
+</body>
+</html>
